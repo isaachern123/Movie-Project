@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <title>Movie Project</title>
+  <link rel="stylesheet" href="css/movies.css">
+
+</head>
+<body>
+
+
+<nav class="navbar bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand text-dark ">Movies321</a>
+    <form class="d-flex" role="search">
+      <input class="form-control me-2" type="search" id="searchInput" aria-label="Search" onkeyup="searchBar()">
+      <button class="btn btn-outline-dark" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+    <div id="movies" class="d-flex justify-content-evenly row"></div>
+</div>
+
+
+      <button type="button" class="btn btn-dark m-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Add Movie
+      </button>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Add Movie</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+        <div class="mb-3">
+          <label for="titleInput" class="form-label">Title</label>
+          <input class="form-control" id="titleInput">
+        </div>
+        <div class="mb-3">
+          <label for="genreInput" class="form-label">Genre</label>
+          <input class="form-control" id="genreInput" >
+        </div>
+        <div class="mb-3">
+          <label for="ratingInput" class="form-label">Rating</label>
+          <input class="form-control" id="ratingInput" >
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="addBtn" class="btn btn-dark">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Button trigger modal -->
+
+      <button type="button" class="btn btn-dark mx-auto m-3" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+        Update Movie
+      </button>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel2">Update Movie</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div id="moviesListDD"></div>
+
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">New Title</label>
+          <input class="form-control" id="exampleFormControlInput1">
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput2" class="form-label">New Genre</label>
+          <input class="form-control" id="exampleFormControlInput2" >
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput3" class="form-label">New Rating</label>
+          <input class="form-control" id="exampleFormControlInput3" >
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="upBtn" class="btn btn-dark">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Sort Buttons -->
+
+<button id="sortTitle" type="button" class="btn btn-dark m-3" >
+  Sort by Title
+</button>
+
+<button id="sortGenre" type="button" class="btn btn-dark m-3" >
+  Sort by Genre
+</button>
+
+<button id="sortRating" type="button" class="btn btn-dark m-3" >
+  Sort by Rating
+</button>
+
+
+<div class="container-fluid">
+  <div id="quote" class="text-dark"></div>
+</div>
+
+
+<footer>
+  <div id="loading" class="text-center">
+    <strong>Loading...</strong>
+    <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
+  </div>
+</footer>
+
+
+<script src="js/jquery-3.6.3.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="js/movies.js"></script>
+
+</body>
+</html>
